@@ -19,7 +19,8 @@ function no_thanks() {
 
 // In public/script.js, modify the yes_sure() function and add form submission handling
 function yes_sure() {
-    document.getElementById('contactForm').style.display = 'block';
+    document.getElementById('contactForm').style.display = 'flex';
+    document.getElementById('nope').style.display = 'none';
 
 
 }
