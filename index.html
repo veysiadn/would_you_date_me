@@ -15,10 +15,12 @@
 <body>
     <h1>Hey there,I think you are really cute, how about we have a cup of coffee?</h1>
     <h2>Would you date me?</h2>
-    <button class="yes" onclick="yes_sure()">Sure, why not ❤️</button>
-    <button class="nope" id="nope" onclick="no_thanks()"> No, but thanks</button>
+    <div class="button-container"></div>
+        <button class="yes" onclick="yes_sure()">Sure, why not? ❤️</button>
+        <button class="nope" id="nope" onclick="no_thanks()"> No, but thanks</button>
+    </div>
 <!-- Inside index.html, add a form below the buttons -->
-<form id="contactForm" style="display:none;">
+    <form id="contactForm" style="display:none;", class="contactForm" >
     <label for="phoneNumber">Phone Number:</label>
     <input type="text" id="phoneNumber" name="phoneNumber"><br>
     <label for="instagramHandle">Instagram Handle:</label>

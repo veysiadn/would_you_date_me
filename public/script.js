@@ -21,16 +21,19 @@ function no_thanks() {
 function yes_sure() {
     document.getElementById('contactForm').style.display = 'block';
 
+
 }
 
-// Add this to handle the form submission
 document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent the form from submitting in the traditional way
     var phoneNumber = document.getElementById('phoneNumber').value;
     var instagramHandle = document.getElementById('instagramHandle').value;
     // Process the data here, like sending it to a server or displaying it
     console.log(phoneNumber, instagramHandle); // Example action
-    alert("Thank you!")
-    window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+    alert("Thank you!");
 
+    // Ask the user if they want to proceed
+    if (confirm("Do you want to watch a video?")) {
+        window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
+    }
 });
