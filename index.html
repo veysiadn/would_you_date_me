@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Would you date me?</title>
+    <!-- Style -->
+    <link rel="stylesheet" href="public/style.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <script src="public/script.js"></script>
+</head>
+<body>
+    <h1>Hey there,I think you are really cute, how about we have a cup of coffee?</h1>
+    <h2>Would you date me?</h2>
+    <button class="yes" onclick="yes_sure()">Sure, why not ❤️</button>
+    <button class="nope" id="nope" onclick="no_thanks()"> No, but thanks</button>
+<!-- Inside index.html, add a form below the buttons -->
+<form id="contactForm" style="display:none;">
+    <label for="phoneNumber">Phone Number:</label>
+    <input type="text" id="phoneNumber" name="phoneNumber"><br>
+    <label for="instagramHandle">Instagram Handle:</label>
+    <input type="text" id="instagramHandle" name="instagramHandle"><br>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>
+
