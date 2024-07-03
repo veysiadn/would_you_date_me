@@ -1,34 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <title>Would you date me?</title>
-    <!-- Style -->
-    <link rel="stylesheet" href="public/style.css">
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    <script src="public/script.js"></script>
-</head>
-<body>
-    <div id="container">
-    <h1>Hey there, I think you are really cute, how about we have a cup of coffee?</h1>
-    <h2>Would you date me?</h2>
-    <div class="button-container">
-        <button class="yes" onclick="yes_sure()">Sure, why not? ❤️</button>
-        <button class="nope" id="nope" onclick="no_thanks()"> No, but thanks</button>
-    </div>
-<!-- Inside index.html, add a form below the buttons -->
-    <form id="contactForm" style="display:none;", class="contactForm" >
-    <label for="phoneNumber">Phone Number:</label>
-    <input type="text" id="phoneNumber" name="phoneNumber"><br>
-    <label for="instagramHandle">Instagram Handle:</label>
-    <input type="text" id="instagramHandle" name="instagramHandle"><br>
-    <button type="submit">Submit</button>
-</form>
-</div>
-</body>
-</html>
+<html lang="en-IN" dir="ltr">
+  <head>
+    <title>Do you wanna go out with me?</title>
+    <meta charset="utf-8">
+    <meta name="author" content="SidPro"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <meta name="description" content="Do you wanna go out with me? A website to invite your lover for a date by Collegeek online learning platform."/>
+    <meta name="keywords" content="Do you wanna go out with me,A website to invite your lover for a date,Collegeek,Collegeek.com,learning programing,programming tutorial,tools,Live_DHTML,Convertor,microprocessor"/>
+    <link rel="stylesheet" href="./style.css">
+    <!-- icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="image/icons/favicon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="image/icons/favicon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="image/icons/favicon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="image/icons/favicon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="image/icons/favicon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="image/icons/favicon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="image/icons/favicon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="image/icons/favicon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="image/icons/favicon-180x180.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="image/icons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="image/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="image/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="image/icons/favicon-192x192.png">
+    <link rel="shortcut icon" type="image/x-icon" href="image/icons/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="image/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="image/icons/favicon-144x144.png">
+    <meta name="msapplication-config" content="image/icons/browserconfig.xml">
+    <link rel="manifest" href="image/icons/manifest.json">
+    <!-- icons -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3EWCZHDCG9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
+      gtag('config', 'G-3EWCZHDCG9');
+    </script>
+  </head>
+  <body>
+        <div id="ask" class="container">
+            <div >
+                <h1 class = "header_text">Do you wanna go out with me?</h1>
+            </div>
+            <div class="gif_container">
+                <img src="image/ask.gif" alt="Cute animated illustration">
+            </div>
+            <div class = "buttons">
+                <button class="btn" id = "yesButton" onclick="nextPage()">Yes</button>
+                <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+            </div>
+            <video id="novideo" width="0" height="0" controls>
+                <source src="image/SadMoment.mp4" 
+                   type="video/mp4">
+            </video>
+        </div>
+        <div id="ans" class="container">
+            <div >
+                <h1 class = "header_text">Yeeeyyyy!!</h1>
+            </div>
+            <div class="gif_container">
+                <img src="image/ans.gif" alt="Cute animated illustration">
+            </div>
+            <div class="gif_container qrimage">
+                <img src="image/veysiadn_qr.png" onclick="window.open('https://www.instagram.com/veysiadn/')" alt="Insta Profile QR code">
+            </div>
+            <video id="ansvideo" width="0" height="0" controls>
+                <source src="image/KidsCheering.mp4" 
+                   type="video/mp4">
+            </video>
+        </div>
+    </body> 
+    <script>
+
+        var debounce = function(fn, t = 1000) {
+            let timer;
+            return function(...args) {
+                clearTimeout(timer);
+                timer = setTimeout(() => fn(...args), t);
+            }
+        };
+
+
+        function playAudio()
+        {
+            document.getElementById('novideo').play();
+        }
+
+        function nextPage() {
+            //window.location.href = "yes.html";
+            document.getElementById('ans').style.display = 'block';
+            document.getElementById('ask').style.display = 'none';
+            document.getElementById('novideo').pause();
+            document.getElementById('ansvideo').play();
+        }
+
+        function moveButton() {
+            var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth);
+            var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
+            document.getElementById('noButton').style.left = `${x}px`;
+            document.getElementById('noButton').style.top = `${y}px`;
+            playAudio();
+        }
+
+    </script> 
+</html>

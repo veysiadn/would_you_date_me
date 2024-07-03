@@ -1,3 +1,2 @@
-Would You date me
-
-- Just a simple thing. (I had nothing to do)
+# Do you want to go on a date with me?
+[Would you date me](https://veysiadn.tech/would_you_date_me)
