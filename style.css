@@ -13,7 +13,7 @@ body {
 }
 
 #novideo{
-    visibility: hidden;
+    /* visibility: hidden; */
 }
 
 #noButton {
