@@ -96,7 +96,7 @@ img
     cursor: pointer;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 720px) {
     .header_text{
         color: black;
         font-size: 40px;
@@ -114,6 +114,6 @@ img
 
   .qrs img {
     display: block; /* Ensures images are block level for margin to work */
-    max-width: 250px; /* Makes images responsive */
+    max-width: 200px; /* Makes images responsive */
     height: auto; /* Maintains aspect ratio */
 }
